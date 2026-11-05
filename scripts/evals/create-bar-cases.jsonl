@@ -1,0 +1,20 @@
+{"skill": "unity-batchmode-run", "expect": "allow", "note": "kept by Kaan 2026-11-06: exact headless flags plus an iOS export check"}
+{"skill": "unity-dead-script-refs", "expect": "allow", "note": "kept by Kaan 2026-11-06: GUID scan procedure with its script"}
+{"skill": "dependency-upgrade-policy", "expect": "allow", "note": "kept by Kaan 2026-11-06: SDK bump procedure with pods and Gradle"}
+{"skill": "device-test-handoff", "expect": "allow", "note": "kept by Kaan 2026-11-06: device run protocol while the user taps"}
+{"skill": "video-frame-timing", "expect": "allow", "note": "kept by Kaan 2026-11-06: ffprobe and ffmpeg frame-timing procedure"}
+{"skill": "unity-parallel-subagents", "expect": "allow", "note": "kept by Kaan 2026-11-06: Unity subagent ownership and Editor rules"}
+{"skill": "rclone-google-drive", "expect": "allow", "note": "kept by Kaan 2026-11-06: Drive scope, folder ID and macOS install facts"}
+{"skill": "git-history-search", "expect": "allow", "note": "kept by Kaan 2026-11-06: multi-ref history search procedure"}
+{"skill": "secret-handling", "expect": "allow", "note": "kept by Kaan 2026-11-06: secret handling commands and masks"}
+{"skill": "git-workflow", "expect": "allow", "note": "relabelled keep by Kaan 2026-11-06: carries the dev-to-release merge guard and GUI diff wiring beyond the commit rule"}
+{"skill": "verify-negative-search", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06"}
+{"skill": "claude-code-plugin-mod-not-loaded", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06: tell the user to restart"}
+{"skill": "fill-pasted-template", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06: copy the template exactly"}
+{"skill": "long-work-ledger", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06: one rule, keep a ledger"}
+{"skill": "loose-ends-sweep", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06: repeats session-finalizer"}
+{"skill": "plain-decision-questions", "expect": "deny", "note": "labelled too small by Kaan 2026-11-06: mostly restates AGENTS.md §behavior/analysis"}
+{"skill": "android-build-size-diff", "expect": "allow", "note": "relabelled keep by Kaan 2026-11-06: ships a working diff script and the zip gap method"}
+{"synthetic": {"name": "greet-user-by-name", "level": "global", "body": "---\nname: greet-user-by-name\ndescription: Use when starting a reply to the user.\ncategory: communication\n---\n\nGreet the user by their first name at the start of each reply.\n", "files": {}}, "expect": "deny", "note": "synthetic: a one-line greeting rule"}
+{"synthetic": {"name": "run-doctor-before-commit", "level": "project", "body": "---\nname: run-doctor-before-commit\ndescription: Use before committing in Jacob.\ncategory: git-workflow\n---\n\nAlways run ./scripts/doctor.sh before a commit in Jacob, and only commit when it exits 0.\n- Doctor is the pre-commit gate, so a red doctor means the commit will fail anyway.\n", "files": {}}, "expect": "deny", "note": "synthetic: restates the ruleset's doctor gate"}
+{"synthetic": {"name": "fix-null-ref-in-PlayerController", "level": "project", "body": "---\nname: fix-null-ref-in-PlayerController\ndescription: Use when PlayerController throws a NullReferenceException in Start.\ncategory: troubleshooting\n---\n\nWhen PlayerController throws a NullReferenceException on _rigidbody in Start, cache the Rigidbody with TryGetComponent in Awake instead.\n", "files": {}}, "expect": "deny", "note": "synthetic: a narrow one-incident skill that also restates §performance"}

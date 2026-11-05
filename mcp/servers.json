@@ -1,0 +1,6 @@
+{
+  "CoplayMCP": {
+    "url": "http://127.0.0.1:8085/mcp",
+    "note": "Coplay MCP for Unity (com.coplaydev.unity-mcp, the MCPForUnity package). HTTP transport: every agent shares the one server Coplay starts from the Unity window (Window > MCP for Unity > Start Server), and the Editor connects to it. Switched from per-session stdio on 2026-09-21: the Editor runs in HTTP mode, so stdio servers never saw an instance. Agents see Unity only while that server is up. Deliberate spine exception reversing the 2026-07-29 removal — see Jacob_Layout.md §3. WARNING: Coplay's Unity window ALSO writes client MCP configs (Auto-Setup, as 'UnityMCP'/'unityMCP') — bootstrap and Coplay are two writers; if doctor Check 8 reports drift, re-run ./scripts/bootstrap.sh."
+  }
+}

@@ -1,0 +1,60 @@
+root = true
+
+[*.cs]
+# Core formatting
+indent_style = space
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# IDE0040: Accessibility modifiers required (always explicitly declared)
+dotnet_diagnostic.IDE0040.severity = warning
+dotnet_style_require_accessibility_modifiers = always
+
+# C# Naming Conventions - from AGENTS.md §7
+
+# Classes, Structs, Interfaces, Enums, Delegates, Methods, Properties, Events - PascalCase
+dotnet_naming_rule.pascal_case_types_and_members.severity = warning
+dotnet_naming_rule.pascal_case_types_and_members.symbols = pascal_case_targets
+dotnet_naming_rule.pascal_case_types_and_members.style = pascal_case_style
+dotnet_naming_symbols.pascal_case_targets.applicable_kinds = class, struct, interface, enum, delegate, method, property, event
+dotnet_naming_symbols.pascal_case_targets.applicable_accessibilities = any
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# Private/Protected Fields - _camelCase (including Unity serialized fields)
+dotnet_naming_rule.private_protected_fields_should_be_camel_case_with_underscore.severity = warning
+dotnet_naming_rule.private_protected_fields_should_be_camel_case_with_underscore.symbols = private_protected_fields
+dotnet_naming_rule.private_protected_fields_should_be_camel_case_with_underscore.style = camel_case_with_underscore_style
+dotnet_naming_symbols.private_protected_fields.applicable_kinds = field
+dotnet_naming_symbols.private_protected_fields.applicable_accessibilities = private, protected, private_protected, protected_internal
+dotnet_naming_style.camel_case_with_underscore_style.capitalization = camel_case
+dotnet_naming_style.camel_case_with_underscore_style.required_prefix = _
+
+# Constants & Static Readonly - UPPER_SNAKE_CASE
+dotnet_naming_rule.constants_should_be_upper_snake_case.severity = warning
+dotnet_naming_rule.constants_should_be_upper_snake_case.symbols = constants
+dotnet_naming_rule.constants_should_be_upper_snake_case.style = upper_snake_case_style
+dotnet_naming_symbols.constants.applicable_kinds = field
+dotnet_naming_symbols.constants.required_modifiers = const, readonly
+dotnet_naming_style.upper_snake_case_style.capitalization = all_upper
+dotnet_naming_style.upper_snake_case_style.word_separator = _
+
+# Local Variables & Parameters - camelCase
+dotnet_naming_rule.locals_and_parameters_should_be_camel_case.severity = warning
+dotnet_naming_rule.locals_and_parameters_should_be_camel_case.symbols = locals_and_parameters
+dotnet_naming_rule.locals_and_parameters_should_be_camel_case.style = camel_case_style
+dotnet_naming_symbols.locals_and_parameters.applicable_kinds = parameter, local
+dotnet_naming_symbols.locals_and_parameters.applicable_accessibilities = local
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+
+# Other formatting preferences that match standard Rider rules
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true

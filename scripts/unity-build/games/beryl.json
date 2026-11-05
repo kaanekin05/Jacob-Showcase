@@ -1,0 +1,51 @@
+{
+  "project_path": "~/Workspace/g-beryl",
+  "product_name": "Beryl!",
+  "buildinfo_prefix": "Beryl!",
+  "dev_branch": "dev",
+  "release_branch": "release",
+  "profiles": {
+    "test": {
+      "branch": "dev",
+      "android": ["0-And_Test"],
+      "ios": ["0-iOS_Test"]
+    },
+    "release": {
+      "branch": "release",
+      "android": ["2-APK_Release", "3-AAB_Release"],
+      "ios": ["1-iOS_Release"]
+    }
+  },
+  "drive_folder_id": "1EXAMPLEdriveFolderberylxxxxxxxxx",
+  "mention": "@Build Owner",
+  "xcode_major": 26,
+  "sdk_prefix": "iphoneos26.",
+  "team_id": "ABCDEFGHIJ",
+  "iphone_id": "00000000-000000000AA0000A",
+  "session_paths": [".memsearch/", ".claude/autoharness/", ".claude/skills/"],
+  "regenerated_names": ["crashlytics_build_id.xml", "addressables_content_state.bin"],
+  "merge_drivers": [],
+  "keystore_env": ["BERYL_KEYSTORE_PASS", "BERYL_KEYALIAS_PASS"],
+  "ota": {
+    "remote": "studio-minio",
+    "bucket": "beryl",
+    "endpoint": "https://ota.example.com",
+    "cdn_base": "https://ota.example.com/beryl",
+    "profiles": {"test": "development", "release": "production"}
+  },
+  "guards": {
+    "keep_value": [
+      {"file": "Assets/AddressableAssetsData/AddressableAssetSettings.asset", "key": "m_ActiveProfileId",
+       "required": "067be015d747d4b95b1c258e6206febd"},
+      {"file": "Assets/StompyRobot/SRDebugger/usr/Resources/SRDebugger/Settings.asset", "key": "_isEnabled",
+       "required": "0"}
+    ],
+    "forbidden_defines": [
+      {"file": "ProjectSettings/ProjectSettings.asset", "platforms": ["Android", "iPhone"],
+       "symbols": ["SR_ENABLED", "BERYL_DEV"]}
+    ],
+    "forbidden_attributes": [
+      {"file": "Assets/Plugins/Android/AndroidManifest.xml", "attribute": "android:debuggable"}
+    ]
+  }
+}

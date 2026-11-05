@@ -1,0 +1,6 @@
+{
+  "name": "quick-bar",
+  "version": "0.1.0",
+  "description": "Side pane with a context meter and one-click buttons for frequent skills and commands",
+  "types": "./types/index.d.ts"
+}

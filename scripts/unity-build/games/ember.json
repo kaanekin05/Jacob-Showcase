@@ -1,0 +1,43 @@
+{
+  "project_path": "~/Workspace/g-ember",
+  "product_name": "Ember",
+  "buildinfo_prefix": "Ember",
+  "dev_branch": "chore/sdk-integration",
+  "release_branch": "chore/sdk-integration",
+  "build_method": "Ember.BuildTools.EmberBuildPipeline.Build",
+  "profiles": {
+    "test": {
+      "branch": "chore/sdk-integration",
+      "android": ["0-And_Test"],
+      "ios": ["0-iOS_Test"]
+    },
+    "release": {
+      "branch": "chore/sdk-integration",
+      "android": ["2-APK_Release", "3-AAB_Release"],
+      "ios": ["1-iOS_Release"]
+    }
+  },
+  "drive_folder_id": "1EXAMPLEdriveFolderemberxxxxxxxxx",
+  "mention": "@Build Owner",
+  "xcode_major": 26,
+  "sdk_prefix": "iphoneos26.",
+  "team_id": "ABCDEFGHIJ",
+  "iphone_id": "00000000-000000000AA0000A",
+  "session_paths": [".memsearch/", ".claude/autoharness/", ".claude/skills/"],
+  "regenerated_names": ["crashlytics_build_id.xml"],
+  "merge_drivers": [],
+  "keystore_env": ["EMBER_KEYSTORE_PASS", "EMBER_KEYALIAS_PASS"],
+  "guards": {
+    "keep_value": [
+      {"file": "Assets/StompyRobot/SRDebugger/usr/Resources/SRDebugger/Settings.asset", "key": "_isEnabled",
+       "required": "0"}
+    ],
+    "forbidden_defines": [
+      {"file": "ProjectSettings/ProjectSettings.asset", "platforms": ["Android", "iPhone"],
+       "symbols": ["SR_ENABLED", "DISABLE_SRDEBUGGER"]}
+    ],
+    "forbidden_attributes": [
+      {"file": "Assets/Plugins/Android/AndroidManifest.xml", "attribute": "android:debuggable"}
+    ]
+  }
+}
